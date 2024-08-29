@@ -19,13 +19,18 @@ Clear Completed Tasks: Users can remove all completed tasks at once, keeping the
 # Task Filtering:
 
 All: Displays all tasks, whether completed or not.
+
 Uncompleted: Filters and displays only the tasks that have not been completed.
+
 Completed: Filters and displays only the tasks that have been completed.
+
 Task Counter: The application displays the number of tasks left to be completed, updating automatically as tasks are added, completed, or deleted.
 
 Persistent Data: All tasks are stored in the browser’s local storage, ensuring that tasks persist even after the browser is closed or the page is refreshed.
 
 # Technologies Used
 HTML5: For structuring the content.
+
 CSS3: For styling the application.
+
 JavaScript (ES6+): For adding interactivity and managing the task list.
