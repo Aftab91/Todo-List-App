@@ -1,7 +1,5 @@
 # Todo-List-App
 
-# Project Overview
-
 This project is a dynamic and interactive To-Do List application built using HTML, CSS, and JavaScript. The application allows users to manage their tasks efficiently by adding new tasks, marking tasks as completed, and filtering tasks based on their status. The task list is stored in the browser's local storage, ensuring persistence across sessions.
 
 # Features
