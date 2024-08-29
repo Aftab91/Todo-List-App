@@ -1,0 +1,363 @@
+/*
+FONT IMPORT ============
+*/
+@import url("https://fonts.googleapis.com/css?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+/*
+CSS VARIABLES ============
+*/
+:root {
+  --light-color: #39c1c1;
+  --dark-color: #b30000;
+  --primary-color: #02374f;
+}
+
+body {
+  overflow: hidden;
+  min-height: 100vh;
+}
+/* ==================hr tag style =================== */
+hr {
+  border: 0;
+  height: 1px;
+  background: #000000;
+  margin: 20px 0;
+}
+/*
+DEFAULT VALUES ============
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  font-weight: 100;
+}
+/*=================HEADER STYLES================*/
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px; /* Adjust margin as needed */
+}
+
+.header img {
+  margin-right: 15px; /* Space between image and heading */
+}
+
+.header h2 {
+  color: var(--primary-color);
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  margin: 0; /* Remove default margin */
+}
+
+.header h2 i {
+  margin-left: 250px; /* Space between text and icon */
+}
+
+/*================CONTAINER STYLES===============*/
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px 10px; /* 20px top and bottom, 10px left and right */
+  background-image: linear-gradient(93.2deg, #1c7a99 14.4%, #1c5874 90.8%);
+}
+
+
+/* Container for image and input field */
+.input-container {
+  display: flex; /* Align items horizontally */
+  align-items: center; /* Vertically center items */
+  background: var(--light-color);
+  border-radius: 30px;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+
+/* Style for the image */
+.todo-icon {
+  width: 30px; /* Adjust size as needed */
+  height: 30px;
+  background: var(--light-color);
+  margin-right: 10px; /* Space between the image and input field */
+}
+
+/* Style for the input field */
+#input-box {
+  flex: 1; /* Make the input field take up remaining space */
+  border: none;
+  outline: none;
+  padding: 10px;
+  background: transparent;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+}
+
+
+/*=================TODO APP STYLES===============*/
+.todo-app {
+  width: 100%;
+  max-width: 580px;
+  background:#fff;
+  margin: 150px auto 20px;
+  padding: 40px 30px 40px;
+  border-radius: 25px;
+  transition: box-shadow 0.15s, transform 0.5s;
+  box-shadow:#2d234266 0 2px .4px,#2d23424d 0 7px 13px - 3px, #3a416f80 0 -3px 0 inset;
+  position: relative; /* Ensure positioning context for footer */
+}
+
+.todo-app:hover {
+  box-shadow: #2d234266 0 4px 8px, #2d23424d 0 7px 13px -3px,□#2c2c2c 0 -3px 0 inset;
+  transform: translateY(-3px);
+}
+
+/*=================ROW STYLES====================*/
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--light-color);
+  outline: none;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+.row input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background: transparent;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+}
+
+.row input::placeholder {
+  color: var(--primary-color);
+}
+
+.row button {
+  background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #02374f 100%);
+  border: none;
+  border-radius: 30px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58,
+  65, 111, 0.5) 0 -3px 0 inset;
+  color:#fff;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 30px;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  font-size: 1.3em;
+}
+
+.row button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, ☐ #3c4fe0
+  0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+.row button:active {
+  box-shadow: ☐ #3c4fe0 0 3px 7px inset;
+  transform: translateY(2px);
+} I
+.row button i {
+  margin-left: 10px;
+  margin-right: -10px;
+}
+/*=================LIST ITEM STYLES==============*/
+ul{
+  padding-left: 0;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  padding: 12px;
+  user-select: none;
+  cursor: pointer;
+  background-color: var(--light-color);
+  border-radius: 30px;
+  margin-block: 10px;
+  position: relative; /* Ensure that the delete button is positioned correctly */
+
+}
+
+/* Add strike-through with ::after pseudo-element */
+ul li.checked::after {
+  content: "";
+  position: absolute;
+  left: calc(1.2em + 15px); /* Start after the icon */
+  width: calc(100% - 1.2em - 15px - 30px); /* Adjust width to cover only the text */
+  height: 2px;
+  background-color: currentColor;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+ul li::before {
+  content: "\f111"; /* Unicode for fa-circle */
+  font-family: "Font Awesome 6 Free";
+  font-size: 1.2em;
+  color: var(--primary-color);
+  margin-right: 15px; 
+  display: inline-block;
+}
+
+ul li.checked {
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 50px;
+}
+
+ul li.checked::before {
+  color: var(--light-color);
+  content: "\f058"; /* Unicode for fa-check-circle */
+  font-family: "Font Awesome 6 Free";
+}
+
+ul li span {
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  font-size: 1.6em;
+  color: var(--primary-color);
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+
+
+/*=================SPAN HOVER AND CHECKED STYLES========*/
+ul li.checked span {
+  color: #fff;
+  text-decoration: none; /* Ensure no strike-through on delete button */
+}
+ul li.checked span:hover {
+  background: #fff;
+  color: var(--dark-color);
+}
+ul li span:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+/* ============Scrolling feature =============================== */
+
+/* Ensure the body allows scrolling when content overflows */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Set the list container to allow scrolling */
+#list-container {
+  max-height: 60vh; /* Adjust this value as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* ======================Buttons Styling ======================= */
+
+/* Style for the container holding both divs */
+.button-container {
+  display: flex; /* Use Flexbox to arrange child elements side by side */
+  gap: 10px; /* Adjust the space between the two divs as needed */
+  align-items: center; /* Center align items vertically */
+  margin-top: 10px; /* Optional: Add margin-top if needed */
+}
+
+.complete-all-container {
+  display: flex;
+  /* text-align: center; */
+  margin-top: 10px;
+  margin-right: 180px;
+}
+
+.clear-completed-container {
+  display: flex;
+  /* text-align: center; */
+  margin-top: 10px;
+  /* margin-right: 100px; */
+}
+
+
+#complete-all-text {
+  cursor: pointer;
+  margin-top: 3px;
+  /* font-size: 1em; */
+  font-weight: bold;
+}
+
+#clear-completed-text {
+  cursor: pointer;
+  margin-top: 6px;
+  margin-left: 2px;
+  font-weight: bold;
+}
+#clear-completed-text:hover {
+  color: #39c1c1;
+}
+
+#complete-all-text:hover {
+  color: #39c1c1;
+}
+
+/* =====================footer styles =================== */
+/* Style for the task footer container */
+.task-footer {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; Space between items */
+  margin-top: 10px; /* Optional: Add margin-top if needed */
+}
+
+/* Style for the 'tasks left' text */
+#items-left {
+  margin-right: 224px; /* Adjust space to the right of 'tasks left' */
+}
+
+/* Style for the 'All' text */
+#show-all-text {
+  cursor: pointer; /* Add pointer cursor to indicate it's clickable */
+  color: #007bff; /* Add color for 'All' text */
+  font-weight: bold; /* Make 'All' text bold */
+}
+
+#uncompleted-text {
+  cursor: pointer; /* Add pointer cursor to indicate it's clickable */
+  color: #db2929; /* Add color for 'Uncompleted' text */
+  font-weight: bold; /* Make 'Uncompleted' text bold */
+  margin-left: 10px; /* Adjust space to the left of 'Uncompleted' */
+}
+/* color: #28a745 */
+
+#completed-text {
+  cursor: pointer; /* Add pointer cursor to indicate it's clickable */
+  color: #28a745; /* Add color for 'Completed' text */
+  font-weight: bold; /* Make 'Completed' text bold */
+  margin-left: 10px; /* Adjust space to the left of 'Completed' */
+}
+
+/* Hover effect */
+#show-all-text:hover,
+#uncompleted-text:hover,
+#completed-text:hover {
+  color: black; /* Change text color to black on hover */
+  font-weight: bold; /* Ensure text is bold on hover */
+}
