@@ -34,3 +34,19 @@ HTML5: For structuring the content.
 CSS3: For styling the application.
 
 JavaScript (ES6+): For adding interactivity and managing the task list.
+
+# How to Use
+
+Clone the Repository:
+
+git clone https://github.com/yourusername/todo-list-app.git
+
+Open the index.html file in your preferred web browser.
+
+Add a Task: Type a task into the input box and press "Enter."
+
+Complete a Task: Click on a task to mark it as completed.
+
+Delete a Task: Click the delete button (×) next to a task to remove it.
+
+Filter Tasks: Use the "All," "Uncompleted," and "Completed" options to filter your task list.
