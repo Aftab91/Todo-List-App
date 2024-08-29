@@ -39,7 +39,7 @@ JavaScript (ES6+): For adding interactivity and managing the task list.
 
 Clone the Repository:
 
-git clone https://github.com/yourusername/todo-list-app.git
+git clone https://github.com/aftab91/todo-list-app.git
 
 Open the index.html file in your preferred web browser.
 
